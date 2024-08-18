@@ -38,7 +38,9 @@ def calculate_mean_daily_energy(df, start_date, end_date):
     """
     daily_energy = calculate_daily_energy(df, start_date, end_date)
     mean_daily_energy = daily_energy.mean()
-    return mean_daily_energy
+    # Format mean_daily_energy to 2 decimal points
+    formatted_mean_daily_energy = f"{mean_daily_energy:.2f}"
+    return formatted_mean_daily_energy
 
 
 def calculate_daily_energy(df, start_date, end_date):
